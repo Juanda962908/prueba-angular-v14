@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CounterEffects } from "./store/effects/app.effects";
-import { counterReducer } from "./store/reducers/app.reducers";
 import { StoreModule } from "@ngrx/store";
 import { EffectsModule } from "@ngrx/effects";
+import { MatIconModule } from "@angular/material/icon";
+import { HttpClientModule } from "@angular/common/http";
+import { MatRadioModule } from "@angular/material/radio";
+import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule } from "@angular/material/button";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppFacade } from "./app.facade";
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { GetAllProductsEffects } from "./store/effects/get-all-products.effects";
+import { getAllProductsReducer } from "./store/reducers/get-all-products.reducers";
 
 @NgModule({
   declarations: [
@@ -16,11 +24,21 @@ import { EffectsModule } from "@ngrx/effects";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({ counter: counterReducer }),
-    EffectsModule.forRoot([CounterEffects])
+    HttpClientModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    StoreModule.forRoot({products: getAllProductsReducer}),
+    EffectsModule.forRoot([GetAllProductsEffects]),
+    MatIconModule,
+    MatRadioModule,
+    MatButtonToggleModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [
+    AppFacade
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
