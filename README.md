@@ -1,5 +1,8 @@
 # CrudApp
 
+![image](https://github.com/Juanda962908/prueba-angular/assets/59231346/bb7eae43-a8b4-4b0c-8b5a-6adf1077e23f)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
 This application uses a custom backend in the teslo-shops-backend project which is built with nestjs.
