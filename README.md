@@ -1,8 +1,9 @@
 # CrudApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
-Esta app utiliza un backend personalizado en el proyecto de teslo-shops-backend el cual es construido con nestjs.
-Este backend también será compartido para poder ejecutar esta app
+
+This application uses a custom backend in the teslo-shops-backend project which is built with nestjs.
+This backend will also be shared in order to run this application.
 
 ## Development server
 
