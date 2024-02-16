@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This application uses a custom backend in the teslo-shops-backend project which is built with nestjs.
 This backend will also be shared in order to run this application.
 
+link of backend for rest API = https://github.com/Juanda962908/teslo-backend-prueba-angular
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
